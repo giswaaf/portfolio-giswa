@@ -49,6 +49,11 @@
     .reveal-item.is-visible{opacity:1;transform:translateY(0)}
     .reveal-item:nth-child(2){transition-delay:.08s}.reveal-item:nth-child(3){transition-delay:.16s}.reveal-item:nth-child(4){transition-delay:.24s}
     @media(prefers-reduced-motion:reduce){.reveal-item{opacity:1;transform:none;transition:none}}
+      .project,.activity-card{position:relative}
+    .project::after,.activity-card::after{content:"View details ↗";position:absolute;inset:auto 18px 18px auto;padding:9px 13px;background:#050505;color:#fff;border-radius:20px;font-size:11px;letter-spacing:.02em;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;z-index:3}
+    .project:hover::after,.activity-card:hover::after{opacity:1;transform:translateY(0)}
+    @media(max-width:560px){.project::after,.activity-card::after{opacity:1;transform:none;position:relative;inset:auto;display:inline-block;margin:18px 20px 20px auto;width:max-content}}
+    @media(prefers-reduced-motion:reduce){.project::after,.activity-card::after{transition:none}}
   </style>
 </head>
 <body>
@@ -107,6 +112,7 @@
 </script>
 </body>
 </html>
+
 
 
 
